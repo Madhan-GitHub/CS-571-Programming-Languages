@@ -1,0 +1,192 @@
+<html>
+<head>
+    <title>Simple Math Quiz</title>
+</head>
+<script type="text/javascript">
+    var total = 0;
+    var numberOfCorrect = 0;
+    var numberOfWrong = 0;
+
+    // *****************************************Integer Addition****************************************************
+
+    function integerAddition() {
+        var x = Math.floor(Math.random() * 10);
+        var y = Math.floor(Math.random() * 10);
+
+        var answerByUser = prompt("Integer Addition\n" + x + "+" + y + "=");
+        var correctAnswer = x + y;
+        if (correctAnswer == answerByUser) {
+            total++;
+            numberOfCorrect++;
+            alert("Correct answer.\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+        else {
+            total++;
+            numberOfWrong++;
+            alert("Wrong answer.\nThe correct answer is " + correctAnswer + "\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+    }
+
+    // *****************************************Integer Subraction****************************************************
+
+    function integerSubraction() {
+        var x = Math.floor(Math.random() * 10);
+        var y = Math.floor(Math.random() * 10);
+
+        var answerByUser = prompt("Integer Subraction\n" + x + "-" + y + "=");
+        var correctAnswer = x - y;
+        if (correctAnswer == answerByUser) {
+            total++;
+            numberOfCorrect++;
+            alert("Correct answer.\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+        else {
+            total++;
+            numberOfWrong++;
+            alert("Wrong answer.\nThe correct answer is " + correctAnswer + "\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+    }
+
+    // *****************************************Float Addition****************************************************
+
+    function floatAddition() {
+        var x1 = Math.floor(Math.random() * 10);
+        var y1 = Math.floor(Math.random() * 10);
+        var x2 = 0.01 * Math.floor(Math.random() * 11); // (It returns decimal value with only 2 digits)
+        var y2 = 0.01 * Math.floor(Math.random() * 11); // (It returns decimal value with only 2 digits)
+        var x = x1 + x2;
+        var y = y1 + y2;
+
+        var answerByUser = prompt("Float Addition\n" + x + "+" + y + "=");
+        var correctAnswer = (x + y).toFixed(2); // (It allows only 2 values after decimal)
+        if (correctAnswer == answerByUser) {
+            total++;
+            numberOfCorrect++;
+            alert("Correct answer.\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+        else {
+            total++;
+            numberOfWrong++;
+            alert("Wrong answer.\nThe correct answer is " + correctAnswer + "\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+    }
+
+    // *****************************************Float Subraction****************************************************
+
+    function floatSubraction() {
+        var x1 = Math.floor(Math.random() * 10);
+        var y1 = Math.floor(Math.random() * 10);
+        var x2 = 0.01 * Math.floor(Math.random() * 11); // (It returns decimal value with only 2 digits)
+        var y2 = 0.01 * Math.floor(Math.random() * 11); // (It returns decimal value with only 2 digits)
+        var x = x1 + x2;
+        var y = y1 + y2;
+
+        var answerByUser = prompt("Float Subraction\n" + x + "-" + y + "=");
+        var correctAnswer = (x - y).toFixed(2); // (It allows only 2 values after decimal)
+        if (correctAnswer == answerByUser) {
+            total++;
+            numberOfCorrect++;
+            alert("Correct answer.\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+        else {
+            total++;
+            numberOfWrong++;
+            alert("Wrong answer.\nThe correct answer is " + correctAnswer + "\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+    }
+
+    // *****************************************Complex Addition****************************************************
+
+    function complexAddition() {
+        var x1 = Math.floor(Math.random() * 10);
+        var y1 = Math.floor(Math.random() * 10);
+        var x2 = Math.floor(Math.random() * 10);
+        var y2 = Math.floor(Math.random() * 10);
+        var x = (x1 + x2).toString();
+        var y = (y1 + y2).toString();
+
+        var answerByUser = prompt("Complex Addition\n(" + x1 + "+" + y1 + "i) + (" + x2 + "+" + y2 + "i) =\n Required format : x+yi");
+        var correctAnswer = x.concat("+", y, "i");
+        if (correctAnswer == answerByUser) {
+            total++;
+            numberOfCorrect++;
+            alert("Correct answer.\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+        else {
+            total++;
+            numberOfWrong++;
+            alert("Wrong answer.\nThe correct answer is " + correctAnswer + "\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+    }
+
+    // *****************************************Complex Subraction****************************************************
+
+    function complexSubraction() {
+        var x1 = Math.floor(Math.random() * 10);
+        var y1 = Math.floor(Math.random() * 10);
+        var x2 = Math.floor(Math.random() * 10);
+        var y2 = Math.floor(Math.random() * 10);
+        var x = (x1 - x2).toString();
+        var y = (y1 - y2).toString();
+
+        var answerByUser = prompt("Complex Subractions\n(" + x1 + "+" + y1 + "i) - (" + x2 + "+" + y2 + "i) =\n Required format : x+yi or x-yi");
+        if (y > 0) {
+            var correctAnswer = x.concat("+", y, "i");
+        }
+        else if (y < 0) {
+            var correctAnswer = x.concat(y, "i");
+        }
+        else if (y == 0){
+            var correctAnswer = x
+        }
+        if (correctAnswer == answerByUser) {
+            total++;
+            numberOfCorrect++;
+            alert("Correct answer.\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+        else {
+            total++;
+            numberOfWrong++;
+            alert("Wrong answer.\nThe correct answer is " + correctAnswer + "\nTotal:" + total + "\nCorrect:" + numberOfCorrect + "\nWrong:" + numberOfWrong);
+        }
+    }
+
+    // *****************************************Check Score****************************************************
+
+    function checkScore() {
+        alert("\n Total: " + total + "\n Correct: " + numberOfCorrect + "\n Wrong: " + numberOfWrong);
+    }
+
+    // *****************************************Reset Score****************************************************
+
+    function resetScore() {
+        total = 0;
+        numberOfCorrect = 0;
+        numberOfWrong = 0;
+        alert("\n Total: " + total + "\n Correct: " + numberOfCorrect + "\n Wrong: " + numberOfWrong);
+    }
+
+</script>
+
+<body>
+    <center>
+        <br>
+        <h2>Simple Math Quiz</h2>
+        <table>
+            <td><button onclick="integerAddition()"> Integer Addition </button></td>
+            <td><td><button onclick="integerSubraction()"> Integer Subtraction </button></td><tr><tr>
+
+            <tr><td><button onclick="floatAddition()"> Float Addition </button></td>
+                <td><td><button onclick="floatSubraction()"> Float Subtraction </button></td><tr><tr>
+
+            <tr><td><button onclick="complexAddition()"> Complex Addition </button></td>
+                <td><td><button onclick="complexSubraction()"> Complex Subtraction </button><td><tr><tr>
+            
+            <tr><td><button onclick="checkScore()"> Check score </button></td>
+                <td><td><button onclick="resetScore()"> Reset score </button></td><tr>
+            <tr>
+
+        </table>
+    </center>
+</body>
+</html>
